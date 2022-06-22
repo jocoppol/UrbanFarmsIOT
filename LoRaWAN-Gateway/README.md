@@ -17,7 +17,8 @@ RAKWireless Source Code
 
 #### Config files
 
-[global.json](./global.json)
+[global_conf.json](./global_conf.json)
+[local_conf.json](./local_conf.json)
 
 ### Connect to node-red
 
