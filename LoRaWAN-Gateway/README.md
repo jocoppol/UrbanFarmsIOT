@@ -17,7 +17,7 @@ RAKWireless Source Code
 
 ### Connect to node-red
 
-	<http://rak-gateway.local:1880>
+	http://rak-gateway.local:1880
 
 ### LoRa_Pkt_Fwd
 
