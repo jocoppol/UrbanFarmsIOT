@@ -11,7 +11,15 @@ RAKWireless Source Code
 <https://github.com/RAKWireless/rak_common_for_gateway>
 </p>
 
-### Lo$a_Pkt_Fwd
+### Log in to Rak Gateway
+
+	ssh pi@rak-gateway.local password: xxxxxx
+
+### Connect to node-red
+
+	<http://rak-gateway.local:1880
+
+### LoRa_Pkt_Fwd
 
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl stop ttn-gateway.service
 	
@@ -78,7 +86,7 @@ RAKWireless Source Code
 
 	 pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl disable nodered.service
 
-         pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ journalctl -u nodered.service -f
+	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ journalctl -u nodered.service -f
 
 
 ### Verify MQTT publish
