@@ -65,7 +65,7 @@ RAKWireless Source Code
 
 [Flow Configuration](./node-red-flows.json)
 
-![Flow Diagram](./Node-Red_Flow.png)
+![Flow Diagram](./Node-Red-Flow.png)
 
 
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl status nodered.service 
