@@ -1,0 +1,170 @@
+[
+    {
+        "id": "c338982a285d95df",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6f717a3f9f4b8216",
+        "type": "mqtt out",
+        "z": "c338982a285d95df",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0b96fb7c0a3185e4",
+        "x": 970,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "1fb95ce45b21c59c",
+        "type": "lorawan-server",
+        "z": "c338982a285d95df",
+        "name": "",
+        "port": "1700",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "6ae8a9ffdf12c2fa",
+                "3a9df0f8772d90c5"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6ae8a9ffdf12c2fa",
+        "type": "base64",
+        "z": "c338982a285d95df",
+        "name": "b64-str",
+        "action": "b64",
+        "property": "payload.data",
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "39f29cf748d63339"
+            ]
+        ]
+    },
+    {
+        "id": "39f29cf748d63339",
+        "type": "json",
+        "z": "c338982a285d95df",
+        "name": "",
+        "property": "payload.data",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "34748a47e9cd7dc7",
+                "cb79fe836ef94079"
+            ]
+        ]
+    },
+    {
+        "id": "34748a47e9cd7dc7",
+        "type": "function",
+        "z": "c338982a285d95df",
+        "name": "MQTT Topic & Payload",
+        "func": "msg.topic = \"/sensors/field/\"+msg.payload.data[\"NID\"];\nvar timestamp = \"TMST\";\nvar timevalue = msg.payload.tmst;\nmsg.payload.data[timestamp] = timevalue;\nmsg.payload = msg.payload.data\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 100,
+        "wires": [
+            [
+                "6f717a3f9f4b8216",
+                "d38a4e2a62c1606e"
+            ]
+        ]
+    },
+    {
+        "id": "d38a4e2a62c1606e",
+        "type": "debug",
+        "z": "c338982a285d95df",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3a9df0f8772d90c5",
+        "type": "debug",
+        "z": "c338982a285d95df",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "cb79fe836ef94079",
+        "type": "debug",
+        "z": "c338982a285d95df",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "0b96fb7c0a3185e4",
+        "type": "mqtt-broker",
+        "name": "RaspberryPi",
+        "broker": "192.168.8.174",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "node-red",
+        "birthQos": "0",
+        "birthPayload": "\"Hello World\"",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    }
+]
