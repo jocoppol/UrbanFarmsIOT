@@ -63,6 +63,11 @@ RAKWireless Source Code
 
 ### Node-Red
 
+[Flow Configuration](./node-red-flows.json)
+
+![Flow Diagram](./Node-Red_Flow.png)
+
+
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl status nodered.service 
 	● nodered.service - Node-RED graphical event wiring tool
 	   Loaded: loaded (/lib/systemd/system/nodered.service; enabled; vendor preset: enabled)
