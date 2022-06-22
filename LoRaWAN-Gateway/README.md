@@ -11,7 +11,7 @@ RAKWireless Source Code
 <https://github.com/RAKWireless/rak_common_for_gateway>
 </p>
 
-### Rak Gateway
+#### Connect to the rak-gateway
 
 	ssh pi@rak-gateway.local password: xxxxxx
 
@@ -21,11 +21,7 @@ RAKWireless Source Code
 
 [local_conf.json](./local_conf.json)   // Configures the gateway. Overrides the Global Config gateway config.
 
-### Connect to node-red
-
-	http://rak-gateway.local:1880
-
-### LoRa_Pkt_Fwd
+#### LoRa_Pkt_Fwd: Start, Stop, Restart, Status, Enable, Disable and Monitor the Service
 
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl status ttn-gateway.service 
 	● ttn-gateway.service - The Things Network Gateway
@@ -53,6 +49,8 @@ RAKWireless Source Code
 	
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl start ttn-gateway.service
 
+	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl restart ttn-gateway.service
+
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl enable ttn-gateway.service
 
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl disable ttn-gateway.service
@@ -63,9 +61,17 @@ RAKWireless Source Code
 
 ### Node-Red
 
+#### Connect to node-red
+
+	http://rak-gateway.local:1880
+
+#### Config
+
 [Flow Configuration](./node-red-flows.json)
 
 ![Flow Diagram](./Node-Red-Flow.png)
+
+#### Nodered: Start, Stop, Restart, Status, Enable, Disable and Monitor the service
 
 
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl status nodered.service 
@@ -92,6 +98,8 @@ RAKWireless Source Code
 	 pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl start nodered.service
 
 	 pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl stop nodered.service
+
+	 pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl restart nodered.service
 
 	 pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl enable nodered.service
 
