@@ -11,9 +11,13 @@ RAKWireless Source Code
 <https://github.com/RAKWireless/rak_common_for_gateway>
 </p>
 
-### Log in to Rak Gateway
+### Rak Gateway
 
 	ssh pi@rak-gateway.local password: xxxxxx
+
+#### Config files
+
+[global.json](./global.json)
 
 ### Connect to node-red
 
