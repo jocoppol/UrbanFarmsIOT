@@ -17,8 +17,9 @@ RAKWireless Source Code
 
 #### Config files
 
-[global_conf.json](./global_conf.json) //Global Config 
-[local_conf.json](./local_conf.json) //Local Config over-rides the Global Config
+[global_conf.json](./global_conf.json) //Configures the SX1301 Concentrator and Radios 
+
+[local_conf.json](./local_conf.json) //Configures the gateway paramets. Overrides the Global Config gateway parameters
 
 ### Connect to node-red
 
