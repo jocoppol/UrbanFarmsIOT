@@ -21,10 +21,6 @@ RAKWireless Source Code
 
 ### LoRa_Pkt_Fwd
 
-	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl stop ttn-gateway.service
-	
-	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl start ttn-gateway.service
-
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl status ttn-gateway.service 
 	● ttn-gateway.service - The Things Network Gateway
 	   Loaded: loaded (/lib/systemd/system/ttn-gateway.service; enabled; vendor preset: enabled)
@@ -47,6 +43,10 @@ RAKWireless Source Code
 	Jun 18 12:11:13 rak-gateway ttn-gateway[311]: # RF packets received by concentrator: 0
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $
 	
+	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl stop ttn-gateway.service
+	
+	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl start ttn-gateway.service
+
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl enable ttn-gateway.service
 
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl disable ttn-gateway.service
