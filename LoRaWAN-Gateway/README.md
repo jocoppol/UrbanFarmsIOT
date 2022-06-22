@@ -88,6 +88,9 @@ RAKWireless Source Code
 
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ journalctl -u nodered.service -f
 
+	!Node-Red-Flow.png
+
+
 
 ### Verify MQTT publish
 
