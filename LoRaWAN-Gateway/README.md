@@ -1,5 +1,5 @@
 # LoRaWAN-Gateway
-LoRaWAN Gateway
+### LoRaWAN Gateway
 
 <p>WisGate Developer D0 / D0+
 RAK7246 / RAK7246G
@@ -11,7 +11,11 @@ RAKWireless Source Code
 <https://github.com/RAKWireless/rak_common_for_gateway>
 </p>
 
-## Check status of the lora_pkt_fwd:
+### Lo$a_Pkt_Fwd
+
+	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl stop ttn-gateway.service
+	
+	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl start ttn-gateway.service
 
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl status ttn-gateway.service 
 	● ttn-gateway.service - The Things Network Gateway
@@ -34,5 +38,53 @@ RAKWireless Source Code
 	Jun 18 12:11:13 rak-gateway ttn-gateway[311]: ### [UPSTREAM] ###
 	Jun 18 12:11:13 rak-gateway ttn-gateway[311]: # RF packets received by concentrator: 0
 	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $
+	
+	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl enable ttn-gateway.service
 
+	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl disable ttn-gateway.service
+
+	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ journalctl -u ttn-gateway.service -f
+
+	
+
+### Node-Red
+
+	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl status nodered.service 
+	● nodered.service - Node-RED graphical event wiring tool
+	   Loaded: loaded (/lib/systemd/system/nodered.service; enabled; vendor preset: enabled)
+	   Active: active (running) since Sat 2022-06-18 11:17:19 EDT; 55min ago
+	     Docs: http://nodered.org/docs/hardware/raspberrypi.html
+	 Main PID: 281 (node-red)
+	    Tasks: 11 (limit: 877)
+	   CGroup: /system.slice/nodered.service
+	           └─281 node-red
+
+	Jun 18 11:18:11 rak-gateway Node-RED[281]: If the system-generated key is lost for any reason, your credentials
+	Jun 18 11:18:11 rak-gateway Node-RED[281]: file will not be recoverable, you will have to delete it and re-enter
+	Jun 18 11:18:11 rak-gateway Node-RED[281]: your credentials.
+	Jun 18 11:18:11 rak-gateway Node-RED[281]: You should set your own key using the 'credentialSecret' option in
+	Jun 18 11:18:11 rak-gateway Node-RED[281]: your settings file. Node-RED will then re-encrypt your credentials
+	Jun 18 11:18:11 rak-gateway Node-RED[281]: file using your chosen key the next time you deploy a change.
+	Jun 18 11:18:11 rak-gateway Node-RED[281]: ---------------------------------------------------------------------
+	Jun 18 11:18:11 rak-gateway Node-RED[281]: 18 Jun 11:18:11 - [info] Starting flows
+	Jun 18 11:18:13 rak-gateway Node-RED[281]: 18 Jun 11:18:13 - [info] Started flows
+	Jun 18 11:18:13 rak-gateway Node-RED[281]: 18 Jun 11:18:13 - [info] [mqtt-broker:RaspberryPi] Connected to broker: mqtt://192.168.8.174
+
+	 pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl start nodered.service
+
+	 pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl stop nodered.service
+
+	 pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl enable nodered.service
+
+	 pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ sudo systemctl disable nodered.service
+
+         pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ journalctl -u nodered.service -f
+
+
+### Verify MQTT publish
+
+	pi@rak-gateway:/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd $ mosquitto_sub -t /sensors/field/# -u xxxxxx -P xxxxxx -h 192.168.8.174
+
+
+	{"NID":"010349","INDEX":0,"HUM":50.95,"TEMP":81.44,"MOIST":887,"BAT":953,"TMST":782566940}
 
