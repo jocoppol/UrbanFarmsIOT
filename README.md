@@ -27,8 +27,8 @@ RAKWireless Source Code
 
 <https://github.com/Makerfabs/Lora-Soil-Moisture-Sensor/tree/master/V3>
 
-#### US Frequency Plan
-##### US902-928 Sub-Band 2
+### US Frequency Plan
+#### US902-928 Sub-Band 2
 
         Uplink:
 
