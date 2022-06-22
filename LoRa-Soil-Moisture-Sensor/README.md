@@ -42,7 +42,7 @@ LoRa Soil Moisture Sensor
 
 
 #### US Frequency Plan
-##### US902-928
+##### US902-928 Sub-Band 2
 
 	Uplink:
 	
