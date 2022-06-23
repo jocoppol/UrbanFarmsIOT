@@ -42,6 +42,6 @@ LoRa Soil Moisture Sensor
 
 ### Provisioned Devices
 
-Node ID | FREQ | BW | SF | CR | Power | OpenHab Name | Location
---- | --- | ---| --- | --- | --- | --- | ---
-010349 | 903.9 | 125 | 9 | 5 | 14 | Sensor_One | Peppers
+| Node ID | FREQ | BW | SF | CR | Power | OpenHab Name | Location |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 010349 | 903.9 | 125 | 9 | 5 | 14 | Sensor_One | Peppers |
