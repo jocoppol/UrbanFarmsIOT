@@ -42,6 +42,6 @@ LoRa Soil Moisture Sensor
 
 ### Provisioned Devices
 
-Node ID | FREQ | BW | SF | CR | Power
---- | --- | ---| --- | --- | ---
-010349 | 903.9 | 125 | 9 | 5 | 14
+Node ID | FREQ | BW | SF | CR | Power | Location
+--- | --- | ---| --- | --- | --- | ---
+010349 | 903.9 | 125 | 9 | 5 | 14 | Peppers
