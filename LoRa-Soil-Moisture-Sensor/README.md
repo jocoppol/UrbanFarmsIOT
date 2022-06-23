@@ -20,7 +20,7 @@ LoRa Soil Moisture Sensor
 #### To add a new device
 
 	//define NODE ID based on the sticker
-	String node_id = "010302";
+	String node_id = "010349";
 
 
 #### To change the deep sleep time
@@ -30,7 +30,7 @@ LoRa Soil Moisture Sensor
 
 #### To change the LoRa parameters
 
-	#define FREQUENCY 904.1 //Set to the next available channel
+	#define FREQUENCY 903.9 //Set to the next available channel
 	#define BANDWIDTH 125.0
 	#define SPREADING_FACTOR 9
 	#define CODING_RATE 5
@@ -40,4 +40,8 @@ LoRa Soil Moisture Sensor
 	#define SX127X_SYNC_WORD 0x14
 	#define CRC true  //This needs to be set to true to work with the rak-gateway
 
+### Provisioned Devices
 
+Node ID | FREQ | BW | SF | CR | Power
+--- | --- | ---| --- | --- | ---
+010349 | 903.9 | 125 | 9 | 5 | 14

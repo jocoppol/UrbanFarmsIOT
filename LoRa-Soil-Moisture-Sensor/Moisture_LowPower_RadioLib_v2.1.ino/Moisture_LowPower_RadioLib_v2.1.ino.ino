@@ -7,7 +7,7 @@
 
 
 //#define NODE ID based on the sticker
-String node_id = "010302";
+String node_id = "010349";
 
 //Set sleep time, when value is 1 almost sleep 20s,when value is 450, almost 1 hour.
 #define SLEEP_CYCLE 450
@@ -16,7 +16,7 @@ String node_id = "010302";
 //Set Lora frequency
 // #define FREQUENCY 434.0
 // #define FREQUENCY 868.0
-#define FREQUENCY 904.1
+#define FREQUENCY 903.9
 #define BANDWIDTH 125.0
 #define SPREADING_FACTOR 9
 #define CODING_RATE 5
