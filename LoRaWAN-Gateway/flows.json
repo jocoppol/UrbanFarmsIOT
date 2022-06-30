@@ -78,7 +78,7 @@
         "type": "function",
         "z": "c338982a285d95df",
         "name": "MQTT Topic & Payload",
-        "func": "msg.topic = \"/sensors/field/\"+msg.payload.data[\"NID\"];\nvar timestamp = \"TMST\";\nvar timevalue = msg.payload.tmst;\nmsg.payload.data[timestamp] = timevalue;\nmsg.payload = msg.payload.data\nreturn msg;",
+        "func": "msg.topic = \"/sensors/field/\"+msg.payload.data[\"NID\"];\nvar timestamp = \"TMST\";\nvar timevalue = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });\nmsg.payload.data[timestamp] = timevalue;\nmsg.payload = msg.payload.data\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
