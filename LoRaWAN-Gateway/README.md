@@ -67,9 +67,9 @@ RAKWireless Source Code
 
 #### Config
 
-[Flow Configuration](./node-red-flows.json)
+[Flow Configuration](./flows.json)
 
-![Flow Diagram](./flows.png)
+![Flow Diagram](./Node-Red-Flow.png)
 
 #### Nodered: Start, Stop, Restart, Status, Enable, Disable and Monitor the service
 
