@@ -15,7 +15,7 @@ RAKWireless Source Code
 
 #### RAK-7246 Configuration
 
-![Rak-7246 Diagram](./rak-7246_4.png)
+![Rak-7246 Diagram](./rak-7246_5.png)
 
 ### Makerfabs LoRa Soil Moisture Sensor
 
